@@ -1,10 +1,10 @@
 import React from 'react';
 import {getData} from '../actions';
 import {connect} from 'react-redux';
-import { PokemonCard, PokemonCardContent, PokemonImageWrapper, PokemonName} from '../styles';
+import { PokemonListCard, PokemonCardContent, PokemonImageWrapper, PokemonName} from '../styles';
 
 
-class Pokemon extends React.Component{
+class PokemonCard extends React.Component{
 
   handleButtonClick(id) {
     this.props.getData(id);
@@ -13,7 +13,7 @@ class Pokemon extends React.Component{
   render(){
     const {pokemon,id} = this.props;
     return (
-            <PokemonCard onClick={() => this.handleButtonClick(id)}>
+            <PokemonListCard onClick={() => this.handleButtonClick(id)}>
                 <PokemonCardContent>
                   <PokemonImageWrapper>
                       <img src={`/img/${id}.png`} />
@@ -22,9 +22,9 @@ class Pokemon extends React.Component{
                       {pokemon.name}
                   </PokemonName>
                 </PokemonCardContent>
-            </PokemonCard>
+            </PokemonListCard>
     )
     }
 }
 
-export default connect(null, {getData})(Pokemon);
+export default connect(null, {getData})(PokemonCard);

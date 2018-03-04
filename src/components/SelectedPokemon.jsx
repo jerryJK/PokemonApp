@@ -1,5 +1,5 @@
 import React from 'react';
-import { PokemonCard, PokemonCardContent, PokemonImageWrapper, PokemonName} from '../styles';
+import { PokemonListCard, PokemonCardContent, PokemonImageWrapper, PokemonName} from '../styles';
 
 
 class selectedPokemon extends React.Component{
@@ -8,7 +8,7 @@ class selectedPokemon extends React.Component{
     const {name, id, height, weight} = this.props.pokemon;
 
     return (
-              <PokemonCard className="col-sm-8 mx-auto">
+              <PokemonListCard className="col-sm-8 mx-auto">
                   <PokemonCardContent>
                     <PokemonImageWrapper>
                       <img src={`/img/${id}.png`} />
@@ -20,7 +20,7 @@ class selectedPokemon extends React.Component{
                       {`id: ${id} height: ${height} weight: ${weight}`}
                     </div>
                   </PokemonCardContent>
-              </PokemonCard>
+              </PokemonListCard>
     )
     }
 }

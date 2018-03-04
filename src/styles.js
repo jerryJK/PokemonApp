@@ -37,7 +37,7 @@ export const PokemonsWrapper = glamorous.div({
     padding: "10px"
 });
 
-export const PokemonCard = glamorous.div({
+export const PokemonListCard = glamorous.div({
     flexBasis: "20%",
     justifyContent:"center",
     boxSizing: "border-box",
