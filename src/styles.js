@@ -2,6 +2,10 @@ import { css } from 'glamor';
 import glamorous from 'glamorous';
 
 
+export const MyApp = glamorous.div({
+    backgroundColor: 'white'
+});
+
 export const Header = glamorous.div({
     backgroundColor: 'rgb(34, 142, 230)',
     padding: '10px',
@@ -34,7 +38,7 @@ export const PokemonsWrapper = glamorous.div({
 });
 
 export const PokemonCard = glamorous.div({
-    flexBasis: "25%",
+    flexBasis: "20%",
     justifyContent:"center",
     boxSizing: "border-box",
     padding: "10px"
@@ -43,16 +47,16 @@ export const PokemonCard = glamorous.div({
 export const PokemonCardContent = glamorous.div({
     cursor: "pointer",
     padding: "10px",
-    boxShadow:"0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
+    boxShadow:"0 1px 2px rgba(23, 22, 22, 0.12), 0 1px 2px rgba(23, 22, 22, 0.12)"
 });
 
 export const PokemonImageWrapper = glamorous.div({
-  display: "flex",
-  justifyContent:"center"
+    display: "flex",
+    justifyContent:"center"
 });
 
 export const PokemonName = glamorous.div({
-  display: "flex",
-  justifyContent:"center",
-  wrap: "nowrap"
+    display: "flex",
+    justifyContent:"center",
+    wrap: "nowrap"
 });
